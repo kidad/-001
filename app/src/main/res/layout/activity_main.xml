@@ -84,7 +84,19 @@
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Bukan-Member" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipe Kamar" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerTipeKamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/kamar" />
 
     <Button
         android:id="@+id/buttonHasil"
