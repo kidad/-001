@@ -40,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         String nama = etNama.getText().toString();
         String ktp = etKtp.getText().toString();
 
+        String fasilitas = "";
+        int startlen = fasilitas.length();
+        if (cbEB.isChecked()) fasilitas += cbEB.getText().toString() + " ; ";
+        if (cbS.isChecked()) fasilitas += cbS.getText().toString() + " ; ";
+        if (cbL.isChecked()) fasilitas += cbL.getText().toString() + " ; ";
+
         tvHasil.setText("Nama : " + nama +
                 "\nNomor KTP : " + ktp);
     }
