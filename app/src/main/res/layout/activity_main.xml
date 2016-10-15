@@ -60,6 +60,32 @@
         android:checked="false"
         android:text="Laundry" />
 
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroupStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Member" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Bukan-Member" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/buttonHasil"
         android:layout_width="wrap_content"

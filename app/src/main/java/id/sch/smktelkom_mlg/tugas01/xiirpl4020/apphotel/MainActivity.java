@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btHasil;
     TextView tvHasil;
     CheckBox cbEB, cbS, cbL;
+    RadioButton rbM, rbBM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         cbEB = (CheckBox) findViewById(R.id.checkBoxEB);
         cbS = (CheckBox) findViewById(R.id.checkBoxS);
         cbL = (CheckBox) findViewById(R.id.checkBoxL);
+        rbM = (RadioButton) findViewById(R.id.radioButtonMember);
+        rbBM = (RadioButton) findViewById(R.id.radioButtonBM);
 
         findViewById(R.id.buttonHasil).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +52,19 @@ public class MainActivity extends AppCompatActivity {
 
         if (fasilitas.length() == startlen) fasilitas = "Tanpa fasilitas tambahan";
 
+        String status = null;
+        String ket = "";
+        if (rbM.isChecked()) {
+            status = rbM.getText().toString();
+        } else if (rbBM.isChecked()) {
+            status = rbBM.getText().toString();
+        } else {
+            status = "Anda belum memilih status";
+        }
+
         tvHasil.setText("Nama : " + nama +
                 "\nNomor KTP : " + ktp +
-                "\nFasilitas : " + fasilitas);
+                "\nFasilitas : " + fasilitas +
+                "\nStatus : " + status);
     }
 }
