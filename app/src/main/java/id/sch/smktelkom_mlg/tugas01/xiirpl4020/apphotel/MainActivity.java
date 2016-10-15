@@ -42,11 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
         String fasilitas = "";
         int startlen = fasilitas.length();
-        if (cbEB.isChecked()) fasilitas += cbEB.getText().toString() + " ; ";
-        if (cbS.isChecked()) fasilitas += cbS.getText().toString() + " ; ";
-        if (cbL.isChecked()) fasilitas += cbL.getText().toString() + " ; ";
+        if (cbEB.isChecked()) fasilitas += cbEB.getText().toString() + ", ";
+        if (cbS.isChecked()) fasilitas += cbS.getText().toString() + ", ";
+        if (cbL.isChecked()) fasilitas += cbL.getText().toString() + " ";
+
+        if (fasilitas.length() == startlen) fasilitas = "Tanpa fasilitas tambahan";
 
         tvHasil.setText("Nama : " + nama +
-                "\nNomor KTP : " + ktp);
+                "\nNomor KTP : " + ktp +
+                "\nFasilitas : " + fasilitas);
     }
 }
